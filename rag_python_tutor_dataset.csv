@@ -1,0 +1,68 @@
+Topic,Explanation,Example
+Variables and Data Types,"Variables in Python are containers for storing data. Python determines the type of variable automatically based on the value assigned. Common data types include int, float, str, and bool.","x = 5
+name = 'Alice'
+is_active = True"
+Control Flow (if/elif/else),"Control flow allows you to make decisions in code using if, elif, and else statements. Conditions are evaluated top-down and only the first true block is executed.","age = 18
+if age >= 18:
+    print('Adult')
+elif age >= 13:
+    print('Teen')
+else:
+    print('Child')"
+Loops,"Loops allow repetitive execution. 'for' is used to iterate over sequences, while 'while' continues as long as a condition is true. Use 'break' and 'continue' for control.","for i in range(5):
+    print(i)
+
+while i < 5:
+    i += 1
+    print(i)"
+Functions,"Functions are reusable blocks of code that perform specific tasks. Use 'def' to define them. They improve code readability, reusability, and modularity.","def greet(name):
+    return f'Hello {name}'"
+Lists vs Tuples,"Lists are mutable sequences while tuples are immutable. Use lists when you need to change, append, or remove elements. Use tuples for fixed collections.","my_list = [1, 2, 3]
+my_tuple = (1, 2, 3)"
+Dictionaries,"Dictionaries store data as key-value pairs. They're useful for fast lookups. Keys must be unique and immutable, values can be of any type.","student = {'name': 'Alice', 'age': 20}
+print(student['name'])"
+String Manipulation,"Python provides powerful string methods for formatting, slicing, and manipulating text. Common methods include .split(), .join(), .replace(), and f-strings.","text = 'hello world'
+print(text.upper())
+print(text.replace('world', 'Python'))"
+File Handling,File handling involves reading and writing files using open(). Always close the file or use 'with' to ensure proper handling. Supports text and binary modes.,"with open('file.txt', 'r') as f:
+    data = f.read()"
+Object-Oriented Programming,"Python supports Object-Oriented Programming (OOP) using classes and objects. Key principles include encapsulation, inheritance, and polymorphism.","class Dog:
+    def __init__(self, name):
+        self.name = name
+    def bark(self):
+        print(self.name + ' says woof!')"
+Error Handling,Python handles errors using try-except blocks. This helps prevent crashes. Use finally for cleanup and raise to trigger exceptions manually.,"try:
+    x = 1 / 0
+except ZeroDivisionError:
+    print('Cannot divide by zero.')"
+List Comprehensions,"List comprehensions offer a compact way to create lists. They can include conditions and nested loops, making them very expressive.",squares = [x**2 for x in range(10)]
+Lambda Functions,"Lambda functions are anonymous functions defined with the lambda keyword. They are typically used for short, throwaway operations.","add = lambda x, y: x + y
+print(add(2, 3))"
+Modules and Packages,Modules allow code organization and reuse. Python has built-in modules and supports third-party modules via pip. Packages are folders with __init__.py.,"import math
+print(math.sqrt(16))"
+Decorators,"Decorators are functions that modify the behavior of other functions. They're often used for logging, validation, and timing functions.","def log(func):
+    def wrapper():
+        print('Calling function')
+        func()
+    return wrapper"
+Generators,Generators allow you to yield values one at a time using the 'yield' keyword. They're memory-efficient and can be iterated lazily.,"def counter():
+    yield 1
+    yield 2"
+Context Managers,"Context managers, typically used with 'with', handle setup and teardown automatically. Useful for file operations, DB connections, etc.","with open('file.txt', 'r') as f:
+    data = f.read()"
+Multithreading vs Multiprocessing,"Multithreading is useful for I/O-bound tasks, while multiprocessing is for CPU-bound tasks. Python’s GIL affects how threads run.","import threading
+import multiprocessing"
+AsyncIO,"AsyncIO lets you run asynchronous code with async/await. It’s used for concurrent networking, file, or web operations without blocking the main thread.","import asyncio
+async def main():
+    await asyncio.sleep(1)"
+Regular Expressions,"Regular expressions are patterns used for string matching, searching, and replacing. Python provides this functionality through the re module.","import re
+pattern = r'\d+'
+re.findall(pattern, 'abc123')"
+Type Hinting,Type hints are optional annotations to indicate expected data types in functions and variables. They improve readability and enable static analysis tools.,"def add(a: int, b: int) -> int:
+    return a + b"
+Unit Testing,"Unit testing ensures your code works as expected. Python provides unittest and pytest to define and run tests, assertions, and test suites.","import unittest
+class TestMath(unittest.TestCase):
+    def test_add(self):
+        self.assertEqual(2+3, 5)"
+Virtual Environments,Virtual environments isolate project dependencies. Use venv or virtualenv to prevent version conflicts between projects.,"python -m venv env
+source env/bin/activate"
